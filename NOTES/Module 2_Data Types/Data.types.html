@@ -1,50 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JAVASCRIPT ESSENTIALS 1 (MOD 2)</title>
-</head>
-<body>
+  </head>
+  <body>
     <section>
-        Data types and type conversions
-Programs are intended to process data. No matter if it is a web shop application, a human resources management system, or a computer game, each of these programs reads, processes and stores huge amounts of data. In the previous chapter, we already learned how to declare, initiate, and modify the variables that allow these data to be stored in the context of a running program. While discussing variables, the concept of data types appeared, and it turned out that the JavaScript language is weakly typed, so among other things it allows you to change the type of data stored in one variable.
+      <h1>Data types and type conversions</h1>
+      <p>
+        Programs are intended to process data. No matter if it is a web shop
+        application, a human resources management system, or a computer game,
+        each of these programs reads, processes and stores huge amounts of data.
+        In the previous chapter, we already learned how to declare, initiate,
+        and modify the variables that allow these data to be stored in the
+        context of a running program. While discussing variables, the concept of
+        data types appeared, and it turned out that the JavaScript language is
+        weakly typed, so among other things it allows you to change the type of
+        data stored in one variable.
+      </p>
 
-We can divide the data according to their properties. For example, you will certainly intuitively distinguish between numeric data and text data. Such classification is of course arbitrary. Numbers can be further divided into, for example, integer numbers and real numbers.
+      <p>
+        We can divide the data according to their properties. For example, you
+        will certainly intuitively distinguish between numeric data and text
+        data. Such classification is of course arbitrary. Numbers can be further
+        divided into, for example, integer numbers and real numbers.
+      </p>
 
-Distinguishing data by their types is one of the characteristic features of any programming language. Each type of data is connected with certain operations we can perform on it. Usually, there are also methods of converting data between selected types (e.g. a number can be converted so that it is saved as a string).
+      <p>
+        Distinguishing data by their types is one of the characteristic features
+        of any programming language. Each type of data is connected with certain
+        operations we can perform on it. Usually, there are also methods of
+        converting data between selected types (e.g. a number can be converted
+        so that it is saved as a string).
+      </p>
 
-In JavaScript, data types are divided into primitive (or simple) and complex (or composite). Among the primitive types, we can find numbers and strings of characters, while the complex types include, for example, arrays and objects.
+      <p>
+        In JavaScript, data types are divided into primitive (or simple) and
+        complex (or composite). Among the primitive types, we can find numbers
+        and strings of characters, while the complex types include, for example,
+        arrays and objects.
+      </p>
 
-The difference between these data types is contained quite precisely in their names. The primitive types, well, are simply not complex. If you write a data of a primitive type into a variable, one particular value will be stored there. This value will be atomic, in other words, it will not be possible to extract components from it. Data of complex types, such as an array, will consist of many elements of primitive (not complex) types.
+      <p>
+        The difference between these data types is contained quite precisely in
+        their names. The primitive types, well, are simply not complex. If you
+        write a data of a primitive type into a variable, one particular value
+        will be stored there. This value will be atomic, in other words, it will
+        not be possible to extract components from it. Data of complex types,
+        such as an array, will consist of many elements of primitive (not
+        complex) types.
+      </p>
 
-Thus, we will logically deal with primitive types first.
+      <p>Thus, we will logically deal with primitive types first.</p>
 
+      <p>
+        Before we move on to discussing data types, we need to introduce one
+        more new concept: literals.
+      </p>
+      <p></p>
 
+      <p>
+        Literals are a way of noting specific values (data) in the program code.
+        Literals are found in virtually all programming languages, including
+        JavaScript. We used literals in the previous chapter when initializing
+        variables.
+      </p>
 
-Before we move on to discussing data types, we need to introduce one more new concept: literals.
-
-Literals are a way of noting specific values (data) in the program code. Literals are found in virtually all programming languages, including JavaScript. We used literals in the previous chapter when initializing variables.
-
-Let's take a look at an example:
-
+      <h3>Let's take a look at an example:</h3>
+      <pre><code>
 let year = 1990;
 console.log(year); // -> 1990
 console.log(1991); // -> 1991
 console.log("Alice"); // -> Alice
+</code></pre>
 
-In this example, we declare the variable year and immediately initiate it with the value 1990. The digits 1990, written in the code at the place of variable initialization, are a literal that represents a number. The value 1990 is displayed on the console using the year variable. Then we display on the console the value 1991 and "Alice", in both cases using literals (representing a number and a string respectively). In JavaScript, almost each data type has its own literal.
+      <p>
+        In this example, we declare the variable year and immediately initiate
+        it with the value 1990. The digits 1990, written in the code at the
+        place of variable initialization, are a literal that represents a
+        number. The value 1990 is displayed on the console using the year
+        variable. Then we display on the console the value 1991 and "Alice", in
+        both cases using literals (representing a number and a string
+        respectively). In JavaScript, almost each data type has its own literal.
+      </p>
     </section>
-    <section>
-        <h1>DATA TYPES - PRIMITIVE - STRING</h1>
-        <p>A very convenient mechanism that was introduced to JavaScript in 2015 is string interpolation. It allows you to treat a character string as a template, in which you can place values in selected places, such as those taken from variables. Such a literal is created using backticks (or grave accents) instead of quotation marks. The places where values are inserted are marked with curly brackets preceded by a $ sign.</p>
 
-        <h3>let country = "Malawi";
+    <section>
+      <h1>DATA TYPES - PRIMITIVE - STRING</h1>
+      <p>
+        A very convenient mechanism that was introduced to JavaScript in 2015 is
+        string interpolation. It allows you to treat a character string as a
+        template, in which you can place values in selected places, such as
+        those taken from variables. Such a literal is created using backticks
+        (or grave accents) instead of quotation marks. The places where values
+        are inserted are marked with curly brackets preceded by a $ sign.
+      </p>
+
+      <pre>     
+    <code>let country = "Malawi";
 let continent = "Africa";
  
 let sentence = `${country} is located in ${continent}.`;
 console.log(sentence); // -> Malawi is located in Africa.
-        </h3>
+        </code>
+        </pre>
     </section>
-</body>
+  </body>
 </html>
