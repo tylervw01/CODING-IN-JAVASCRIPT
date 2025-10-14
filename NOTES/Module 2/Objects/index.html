@@ -30,7 +30,27 @@
     <section>
       <h1>The Length Property</h1>
       <h2>Methods vs. Property</h2>
-      <p></p>
+      <p>
+Quite recently we introduced the concepts of method and property. They appeared when we were talking about the String type. These were functions and values related to a specific object. Now it turns out that an array is implemented as an object in JavaScript, so it probably also has its methods and properties. And indeed it does. There are many very useful methods that help us to work with arrays, such as combining arrays, cutting out elements, sorting, or filtering.
+
+We will only look at some of them now, because many others require us to be able to create our own functions. We will come back to some of them in the section dedicated to functions.
+
+length
+The length property is used to get information about the length (the number of elements) of the array (including empty positions between existing elements).</p>
+      <pre>
+        <code>let names  = ["Olivia", "Emma", "Mateo", "Samuel"];
+console.log(names.length); // -> 4
+
+names[5] = "Amelia";
+console.log(names.length); // -> 6
+
+console.log(names); // -> ["Olivia", "Emma", "Mateo", 
+//"Samuel", undefined, "Amelia"]
+console.log(names[3]); // -> Samuel
+console.log(names[4]); // -> undefined
+console.log(names[5]); // -> Amelia
+</code>
+      </pre>
     </section>
 
     <section>
@@ -42,10 +62,6 @@
       <h1></h1>
       <p></p>
     </section>
-
-
-
-
 
     ///////////////////////////////////// /////////////////////////////////////
     <script src="script.js"></script>
