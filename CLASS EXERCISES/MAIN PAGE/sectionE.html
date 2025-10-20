@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SECTION E</title>
+    <link rel="stylesheet" href="mains.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Section E:</h1>
+      <h2>Non-Boolean Logical Values</h2>
+      <p>Create a small login display script:</p>
+      <p>let user ="";</p>
+      <p>let displayName = user || "Guest User";</p>
+      <p>console.log("Welcome," + displayName);</p>
+      <p>Modify the variable user to test both truthy and falsy behavior.</p>
+    </header>
+    <hr />
+    <button type="button" onclick="location.href='mains.html'">
+      Main page
+    </button>
+    <hr />
+    <script>
+      let user = "";
+      let displayName = user || "Guest User";
+      console.log("Welcome," + displayName);
+      user = "John Doe";
+      displayName = user || "Guest User";
+      console.log("Welcome," + displayName);
+    </script>
+  </body>
+</html>
