@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COMPARISON OPERATORS & PRECEDENCE</title>
+    <link rel="stylesheet" href="mains.css" />
+  </head>
+  <body>
+    <header>
+        <h1>1. COMPARE TWO NUMBERS</h1>
+        <hr>
+        <p>Write a JavaScript program that takes two numbers as input and:</p>
+        <p>
+            <ul>
+                <li>Print "Equal" if they are the same value and type.</li> <br>
+                <li>Print "Same value but different types" if they are equal only in value.</li> <br>
+                <li>Otherwise, print "Different".</li> <br>
+            </ul>
+        </p>  
+        <p>*HINT: Use both == and ===.</p>
+    </header>
+    <hr>
+    <button type="button" onclick="location.href='ageCheck.html'">Page. 2</button>
+    <br><br>
+    <hr> 
+    <script>
+        let num1 = prompt("Enter first number:");
+        let num2 = prompt("Enter second number:");
+
+        if (num1 === num2) {
+            console.log("Equal");
+        } else if (num1 == num2) {
+            console.log("Same value but different types");
+        } else {
+            console.log("Different");
+        }
+    </script>
+  </body>
+</html>
