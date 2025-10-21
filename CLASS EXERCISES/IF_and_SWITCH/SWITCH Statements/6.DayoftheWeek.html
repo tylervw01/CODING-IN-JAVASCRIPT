@@ -1,12 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="IF Statements/if.css">
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="IF Statements/if.css" />
+  </head>
+  <body>
+    <header>
+      <h1>6. DAY OF THE WEEK</h1>
+      <p>
+        Write a program that takes a number (1-7) and prints the corresponding
+        day of the week.
+      </p>
+      <p>
+        Example: <br />
+        Input: 3 -> Output: Wednesday
+      </p>
+    </header>
+    <hr />
+    <button type="button" onclick="location.href='7.SimpleCalculator.html'">
+      7. SIMPLE CALCULATOR
+    </button>
+    <hr />
+    <script>
+      let day = prompt("Enter a number (1-7):");
+      switch (day) {
+        case "1":
+          console.log("Monday");
+          break;
+        case "2":
+          console.log("Tuesday");
+          break;
+        case "3":
+          console.log("Wednesday");
+          break;
+        case "4":
+          console.log("Thursday");
+          break;
+        case "5":
+          console.log("Friday");
+          break;
+        case "6":
+          console.log("Saturday");
+          break;
+        case "7":
+          console.log("Sunday");
+          break;
+        default:
+          console.log("Invalid input");
+      }
+    </script>
+  </body>
 </html>
