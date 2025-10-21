@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>10. VOWEL OR CONSONANT</title>
+    <link rel="stylesheet" href="if.css" />
+  </head>
+  <body>
+    <header>
+      <h1>10. VOWEL OR CONSONANT</h1>
+      <p>
+        Ask the user for a single letter and use a switch to determine whether
+        it's a <bold>vowel</bold> or a <bold>consonant</bold>.
+      </p>
+    </header>
+    <hr />
+    <button type="button" onclick="location.href='if.html'">
+      BACK TO HOMEPAGE
+    </button>
+    <hr />
+    <script>
+      let letter = prompt("Enter a single letter:").toLowerCase();
+      let result;
+      switch (letter) {
+        case "a":
+        case "e":
+        case "i":
+        case "o":
+        case "u":
+          result = "Vowel";
+          break;
+        default:
+          result = "Consonant";
+      }
+      console.log(result);
+    </script>
+  </body>
+</html>
