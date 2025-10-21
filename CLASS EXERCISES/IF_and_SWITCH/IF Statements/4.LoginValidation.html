@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>4. LOGIN VALIDATION</h1>
+      <p>Write a program that checks if:</p>
+      <p>username === "admin"</p>
+      <p>password === "1234"</p>
+      <p>
+        If both are corrent, display "Access granted, otherwise "Access denied".
+      </p>
+    </header>
+    <hr />
+    <script>
+      let username = prompt("Enter username:");
+      let password = prompt("Enter password:");
+      if (username === "admin" && password === "1234") {
+        console.log("Access granted");
+      } else {
+        console.log("Access denied");
+      }
+    </script>
+  </body>
+</html>
