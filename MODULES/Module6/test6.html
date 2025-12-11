@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Module 6 Full Test – Smart Paper</title>
+    <style>
+      body {
+        font-family: "Segoe UI", sans-serif;
+        margin: 2rem;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+      h1,
+      h2 {
+        color: #005f73;
+      }
+      .question {
+        margin-bottom: 1.5rem;
+      }
+      .answer {
+        display: none;
+        background-color: #e0f7fa;
+        padding: 0.75rem;
+        border-left: 4px solid #00796b;
+        margin-top: 0.5rem;
+      }
+      #toggleAnswers {
+        margin-bottom: 2rem;
+        padding: 0.5rem 1rem;
+        background-color: #00796b;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 1rem;
+      }
+      #toggleAnswers:hover {
+        background-color: #004d40;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Module 6: Testing Logic</h1>
+    <button id="toggleAnswers">Reveal 👀</button>
+
+    <!-- Questions & Answers -->
+    <section class="question">
+      <h2>1. What is a SyntaxError?</h2>
+      <div class="answer">
+        An error caused by incorrect code structure, like a missing bracket or
+        typo.
+      </div>
+    </section>
+    <section class="question">
+      <h2>2. What is a ReferenceError?</h2>
+      <div class="answer">
+        An error that occurs when trying to access a variable that hasn’t been
+        declared.
+      </div>
+    </section>
+    <section class="question">
+      <h2>3. What is a TypeError?</h2>
+      <div class="answer">
+        An error caused by performing an invalid operation on a data type, like
+        calling a method on null.
+      </div>
+    </section>
+    <section class="question">
+      <h2>4. What is a RangeError?</h2>
+      <div class="answer">
+        An error triggered when a value is outside the allowed range, like a
+        negative array length.
+      </div>
+    </section>
+    <section class="question">
+      <h2>5. What does try...catch do?</h2>
+      <div class="answer">
+        It lets you handle exceptions without crashing the program.
+      </div>
+    </section>
+    <section class="question">
+      <h2>6. What is the purpose of finally in try...catch?</h2>
+      <div class="answer">
+        It runs cleanup code regardless of whether an error occurred.
+      </div>
+    </section>
+    <section class="question">
+      <h2>7. How do you throw a custom error?</h2>
+      <div class="answer">
+        Use the <code>throw</code> keyword with an Error object or message.
+      </div>
+    </section>
+    <section class="question">
+      <h2>8. What error would this code throw: <code>null.f()</code>?</h2>
+      <div class="answer">TypeError – null has no methods.</div>
+    </section>
+    <section class="question">
+      <h2>9. What does <code>debugger</code> do?</h2>
+      <div class="answer">
+        It pauses code execution and opens the browser’s debugging tools.
+      </div>
+    </section>
+    <section class="question">
+      <h2>10. How can you measure performance in JavaScript?</h2>
+      <div class="answer">
+        Use <code>console.time()</code> and <code>console.timeEnd()</code> to
+        measure execution time.
+      </div>
+    </section>
+    <section class="question">
+      <h2>11. What kind of error is caused by <code>let a = b;</code>?</h2>
+      <div class="answer">ReferenceError – b is not defined.</div>
+    </section>
+    <section class="question">
+      <h2>12. Why is input validation important in functions?</h2>
+      <div class="answer">
+        It prevents unexpected behavior and allows for custom error handling.
+      </div>
+    </section>
+    <section class="question">
+      <h2>13. What does <code>Number.isInteger()</code> help with?</h2>
+      <div class="answer">
+        It checks if a value is a whole number, useful for validating inputs.
+      </div>
+    </section>
+    <section class="question">
+      <h2>14. What happens if you don’t catch an exception?</h2>
+      <div class="answer">
+        The program may crash or stop executing further code.
+      </div>
+    </section>
+    <section class="question">
+      <h2>15. What’s the benefit of using custom error messages?</h2>
+      <div class="answer">
+        They make debugging easier by clearly describing what went wrong.
+      </div>
+    </section>
+
+    <!-- Toggle Logic -->
+    <script>
+      const toggleBtn = document.getElementById("toggleAnswers");
+      const answers = document.querySelectorAll(".answer");
+      let visible = false;
+
+      toggleBtn.addEventListener("click", () => {
+        visible = !visible;
+        answers.forEach((ans) => {
+          ans.style.display = visible ? "block" : "none";
+        });
+        toggleBtn.textContent = visible ? "Hide Answers" : "Show Answers";
+      });
+    </script>
+  </body>
+</html>

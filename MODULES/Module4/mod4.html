@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MODULE 4</title>
+    <link rel="stylesheet" href="/1MAIN/styles/main.css" />
+  </head>
+  <body>
+    <header>
+      <h1>* JAVA.SCRIPT *</h1>
+      <nav>
+        <h1>JavaScript Essentials – Module 4</h1>
+
+        <ul>
+          <li><a href="/1MAIN/index.html">🏠 Home</a></li>
+          <li>
+            <a href="/1MAIN/NOTES/Module1/mod1.html" class="nav-link"
+              >Module 1: Intro</a
+            >
+          </li>
+          <li>
+            <a href="/1MAIN/NOTES/Module2/mod2.html">Module 2: Variables</a>
+          </li>
+          <li>
+            <a href="/1MAIN/NOTES/Module3/mod3.html">Module 3: Operators</a>
+          </li>
+          <li>
+            <a href="/1MAIN/NOTES/Module4/mod4.html">Module 4: Control Flow</a>
+          </li>
+          <li>
+            <a href="/1MAIN/NOTES/Module5/mod5sect1.html"
+              >Module 5: Functions</a
+            >
+          </li>
+          <li>
+            <a href="/1MAIN/NOTES/Module6/mod6.html"
+              >Module 6: Errors & Debugging</a
+            >
+            <!-- </li>
+          <li><a href="/1MAIN/TEST.PREPS/">🧠 Test 6</a></li>
+          <li><a href="quiz.html">🎯 Quiz</a></li>
+          <li><a href="labs.html">🧪 Labs</a></li>
+          <li>
+            <a href="/TEST.PREPS/Internationals/InterExams.html"
+              >📜 International Exam</a
+            > -->
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <h2>MODULE 4</h2>
+    <h3>Control Flow – Conditional Execution and Loops</h3>
+    <p>After completing Module 4, you'll be able to:</p>
+    <ul>
+      <li>
+        Use <code>if</code>, <code>else</code>, and <code>switch</code> to
+        control execution flow
+      </li>
+      <li>
+        Repeat statements using <code>for</code>, <code>while</code>, and
+        <code>do...while</code> loops
+      </li>
+      <li>
+        Apply loop-specific instructions like <code>break</code> and
+        <code>continue</code>
+      </li>
+      <li>Use <code>for...in</code> to iterate over object properties</li>
+      <li>Use <code>for...of</code> to iterate over array elements</li>
+    </ul>
+
+    <section>
+      <h2>💻 Sample Code</h2>
+      <pre><code>
+// Conditional execution
+let score = 85;
+if (score >= 90) {
+  console.log("Grade: A");
+} else if (score >= 75) {
+  console.log("Grade: B");
+} else {
+  console.log("Grade: C");
+}
+
+// Switch statement
+let day = "Monday";
+switch (day) {
+  case "Monday":
+    console.log("Start of the week");
+    break;
+  case "Friday":
+    console.log("Weekend incoming!");
+    break;
+  default:
+    console.log("Just another day");
+}
+
+// Loops
+for (let i = 0; i < 3; i++) {
+  console.log("For loop:", i);
+}
+
+let j = 0;
+while (j < 3) {
+  console.log("While loop:", j);
+  j++;
+}
+
+let k = 0;
+do {
+  console.log("Do...while loop:", k);
+  k++;
+} while (k < 3);
+
+// Loop control
+for (let x = 0; x < 5; x++) {
+  if (x === 2) continue;
+  if (x === 4) break;
+  console.log("Loop control:", x);
+}
+
+// for...in and for...of
+const person = { name: "Tyler", age: 25 };
+for (let key in person) {
+  console.log(key, ":", person[key]);
+}
+
+const colors = ["red", "green", "blue"];
+for (let color of colors) {
+  console.log("Color:", color);
+}
+    </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try It Yourself</h2>
+      <button onclick="runModule4()">Run Code</button>
+    </section>
+
+    <script>
+      function runModule4() {
+        console.clear();
+
+        let score = 85;
+        if (score >= 90) {
+          console.log("Grade: A");
+        } else if (score >= 75) {
+          console.log("Grade: B");
+        } else {
+          console.log("Grade: C");
+        }
+
+        let day = "Monday";
+        switch (day) {
+          case "Monday":
+            console.log("Start of the week");
+            break;
+          case "Friday":
+            console.log("Weekend incoming!");
+            break;
+          default:
+            console.log("Just another day");
+        }
+
+        for (let i = 0; i < 3; i++) {
+          console.log("For loop:", i);
+        }
+
+        let j = 0;
+        while (j < 3) {
+          console.log("While loop:", j);
+          j++;
+        }
+
+        let k = 0;
+        do {
+          console.log("Do...while loop:", k);
+          k++;
+        } while (k < 3);
+
+        for (let x = 0; x < 5; x++) {
+          if (x === 2) continue;
+          if (x === 4) break;
+          console.log("Loop control:", x);
+        }
+
+        const person = { name: "Tyler", age: 25 };
+        for (let key in person) {
+          console.log(key, ":", person[key]);
+        }
+
+        const colors = ["red", "green", "blue"];
+        for (let color of colors) {
+          console.log("Color:", color);
+        }
+      }
+    </script>
+
+    <hr />
+    <button
+      type="button"
+      onclick="location.href='Conditional_Execution/ConEx.html'"
+    >
+      Next Page
+    </button>
+
+    <footer>
+      <p>Module 4 – JavaScript Essentials</p>
+    </footer>
+  </body>
+</html>

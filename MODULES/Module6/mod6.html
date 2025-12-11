@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Module 6 Summary – JavaScript Essentials</title>
+    <link rel="stylesheet" href="/1MAIN/styles/main.css" />
+    <!-- <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 2rem;
+        background-color: #f9f9f9;
+        color: #333;
+      }
+      h1,
+      h2 {
+        color: #005f73;
+      }
+      pre {
+        background-color: #eee;
+        padding: 1rem;
+        overflow-x: auto;
+      }
+      code {
+        font-family: Consolas, monospace;
+      }
+    </style> -->
+  </head>
+  <body>
+    <header>
+      <h1>* JAVA.SCRIPT *</h1>
+      <nav>
+        <h1>JavaScript Essentials – Module 6</h1>
+
+        <ul>
+          <li><a href="/index.html">🏠 Home</a></li>
+          <li>
+            <a href="/1MAIN/NOTES/Module1/mod1.html" class="nav-link"
+              >Module 1: Intro</a
+            >
+          </li>
+          <li>
+            <a href="/1MAIN/NOTES/Module2/mod2.html">Module 2: Variables</a>
+          </li>
+          <li>
+            <a href="/1MAIN/NOTES/Module3/mod3.html">Module 3: Operators</a>
+          </li>
+          <li>
+            <a href="/1MAIN/NOTES/Module4/mod4.html">Module 4: Control Flow</a>
+          </li>
+          <li>
+            <a href="/1MAIN/NOTES/Module5/mod5sect1.html"
+              >Module 5: Functions</a
+            >
+          </li>
+          <li>
+            <a href="/1MAIN/NOTES/Module6/mod6.html"
+              >Module 6: Errors & Debugging</a
+            >
+            <!-- </li>
+          <li><a href="/1MAIN/TEST.PREPS/">🧠 Test 6</a></li>
+          <li><a href="quiz.html">🎯 Quiz</a></li>
+          <li><a href="labs.html">🧪 Labs</a></li>
+          <li>
+            <a href="/TEST.PREPS/Internationals/InterExams.html"
+              >📜 International Exam</a
+            > -->
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <p><strong>Learning Outcomes:</strong></p>
+    <ul>
+      <li>Understand syntax, semantic, and logical errors.</li>
+      <li>
+        Identify and handle JavaScript exceptions: <code>SyntaxError</code>,
+        <code>ReferenceError</code>, <code>TypeError</code>,
+        <code>RangeError</code>.
+      </li>
+      <li>Use <code>try...catch...finally</code> for error handling.</li>
+      <li>Create custom exceptions with <code>throw</code>.</li>
+      <li>
+        Apply debugging techniques: step-by-step execution, variable inspection,
+        and performance timing.
+      </li>
+    </ul>
+
+    <section>
+      <h2>Section 1: Understanding Errors</h2>
+      <ul>
+        <li>Errors are part of daily coding life — they help us learn.</li>
+        <li>Natural language errors mirror programming mistakes.</li>
+        <li>
+          Exceptions are special error objects that interrupt normal flow.
+        </li>
+        <li>Some errors don’t throw exceptions but still cause issues.</li>
+        <li>Confidence grows with practice and pattern recognition.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Section 2: JavaScript Error Types</h2>
+      <h3>1. SyntaxError</h3>
+      <pre><code>
+"use strict";
+iff (true) {
+  console.log("true");
+}
+// → Uncaught SyntaxError: Unexpected identifier 'iff'
+    </code></pre>
+
+      <h3>2. ReferenceError</h3>
+      <pre><code>
+let a = b;
+// → Uncaught ReferenceError: b is not defined
+    </code></pre>
+
+      <h3>3. TypeError</h3>
+      <pre><code>
+null.f();
+// → Uncaught TypeError: Cannot read properties of null
+    </code></pre>
+
+      <h3>4. RangeError</h3>
+      <pre><code>
+let arr = new Array(-1);
+// → Uncaught RangeError: Invalid array length
+    </code></pre>
+
+      <h3>Handling with try...catch</h3>
+      <pre><code>
+try {
+  let result = riskyFunction();
+} catch (error) {
+  console.error("Caught:", error.message);
+} finally {
+  console.log("Cleanup complete.");
+}
+    </code></pre>
+      <hr />
+      <h3>The throw statement and custom errors - continued</h3>
+      <p>In 6.2.1.11 We walk in to bit of a problem!</p>
+      <p>The throw statement and custom errors - continued</p>
+      <h3>Problem:</h3>
+      <pre><code>
+  Function factorial(n) {
+    if (n > 20) {
+        throw new RangeError("Max value 20");
+    }
+    let result = 1;
+    for (; n > 1; n--) {
+        result = result * n;
+    }
+    return result;
+}
+
+console.log(factorial(20)); // -> 2432902008176640000
+console.log(factorial(1000)); // -> Uncaught RangeError: Max value 20
+
+</code></pre>
+      <h3>Solution:</h3>
+      <pre><code>
+  function factorial(n) {
+    if (n > 20) {
+        throw new RangeError("Max value 20");
+    }
+    let result = 1;
+    for (; n > 1; n--) {
+        result = result * n;
+    }
+    return result;
+}
+
+console.log(factorial(20)); // -> 2432902008176640000
+console.log(factorial(1000)); // -> Uncaught RangeError: Max value 20
+</code></pre>
+      <p>WHAT WAS FIXED...</p>
+      <p>
+        The main issue with this code is a syntax error in the function
+        declaration. Here's the explanation and fix: The keyword Function is
+        capitalized, but in JavaScript it should be lowercase function This
+        causes a SyntaxError because Function (capital F) is a constructor, not
+        a function declaration.
+      </p>
+    </section>
+
+    <section>
+      <h2>Section 3: Throwing Custom Errors</h2>
+      <p>Use <code>throw</code> to create your own exceptions:</p>
+      <pre><code>
+function factorial(n) {
+  if (!Number.isInteger(n)) {
+    throw new TypeError("Input must be an integer");
+  }
+  if (n < 0) {
+    throw new RangeError("Input must be non-negative");
+  }
+  if (n > 20) {
+    throw new RangeError("Max value 20");
+  }
+  if (n === 0 || n === 1) return 1;
+
+  let result = 1;
+  for (; n > 1; n--) {
+    result *= n;
+  }
+  return result;
+}
+
+console.log(factorial(5));   // → 120
+console.log(factorial(0));   // → 1
+console.log(factorial(-1));  // → Throws RangeError
+console.log(factorial(3.5)); // → Throws TypeError
+console.log(factorial(21));  // → Throws RangeError
+    </code></pre>
+    </section>
+
+    <section>
+      <button type="button" onclick="location.href='Debugging/mod6.3.html'">
+        DEBUG T.E.S.T PAGE
+      </button>
+      <h2>Debugging & Troubleshooting</h2>
+      <ul>
+        <li>Use browser dev tools to step through code.</li>
+        <li>Inspect and modify variables during runtime.</li>
+        <li>Use <code>debugger</code> to pause execution.</li>
+        <li>
+          Measure performance with <code>console.time()</code> and
+          <code>console.timeEnd()</code>.
+        </li>
+      </ul>
+      <pre><code>
+console.time("loop");
+for (let i = 0; i < 1000000; i++) {}
+console.timeEnd("loop");
+// → loop: 2.345ms
+    </code></pre>
+    </section>
+  </body>
+</html>

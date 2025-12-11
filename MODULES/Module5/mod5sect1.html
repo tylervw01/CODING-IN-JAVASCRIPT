@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Module 5 Section 1 – JavaScript Functions</title>
+    <link rel="stylesheet" href="/1MAIN/styles/main.css" />
+  </head>
+  <body>
+    <hr />
+    <header>
+      <h1>* JAVA.SCRIPT *</h1>
+
+      <nav>
+        <h1>Module 5 Section 1 – JavaScript Functions</h1>
+
+        <ul>
+          <li><a href="/index.html">🏠 Home</a></li>
+          <li>
+            <a href="/1MAIN/NOTES/Module1/mod1.html" class="nav-link"
+              >Module 1: Intro</a
+            >
+          </li>
+          <li>
+            <a href="/1MAIN/NOTES/Module2/mod2.html">Module 2: Variables</a>
+          </li>
+          <li>
+            <a href="/1MAIN/NOTES/Module3/mod3.html">Module 3: Operators</a>
+          </li>
+          <li>
+            <a href="/1MAIN/NOTES/Module4/mod4.html">Module 4: Control Flow</a>
+          </li>
+          <li>
+            <a href="/1MAIN/NOTES/Module5/mod5sect1.html"
+              >Module 5: Functions</a
+            >
+          </li>
+          <li>
+            <a href="/1MAIN/NOTES/Module6/mod6.html"
+              >Module 6: Errors & Debugging</a
+            >
+            <!-- </li>
+          <li><a href="/1MAIN/TEST.PREPS/">🧠 Test 6</a></li>
+          <li><a href="quiz.html">🎯 Quiz</a></li>
+          <li><a href="labs.html">🧪 Labs</a></li>
+          <li>
+            <a href="/TEST.PREPS/Internationals/InterExams.html"
+              >📜 International Exam</a
+            > -->
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <hr />
+    <section>
+      <h2>What Are Functions?</h2>
+      <p>
+        Functions are reusable blocks of code that perform specific tasks. They
+        help organize code and reduce repetition.
+      </p>
+    </section>
+
+    <section>
+      <h2>Declaring Functions</h2>
+      <p>
+        Use the <code>function</code> keyword followed by a name and
+        parentheses.
+      </p>
+      <pre><code>
+function greet() {
+  console.log("Hello!");
+}
+    </code></pre>
+    </section>
+
+    <section>
+      <h2>Calling Functions</h2>
+      <p>Invoke a function by using its name followed by parentheses.</p>
+      <pre><code>
+greet(); // Outputs: Hello!
+    </code></pre>
+    </section>
+
+    <section>
+      <h2>Local Variables</h2>
+      <p>
+        Variables declared inside a function are local and cannot be accessed
+        outside.
+      </p>
+      <pre><code>
+function showMessage() {
+  let message = "Hi!";
+  console.log(message);
+}
+    </code></pre>
+    </section>
+
+    <section>
+      <h2>The Return Statement</h2>
+      <p>Use <code>return</code> to send a value back from a function.</p>
+      <pre><code>
+function add(a, b) {
+  return a + b;
+}
+console.log(add(2, 3)); // Outputs: 5
+    </code></pre>
+    </section>
+
+    <section>
+      <h2>Function Parameters</h2>
+      <p>Parameters allow functions to accept input values.</p>
+      <pre><code>
+function greetUser(name) {
+  return `Hello, ${name}!`;
+}
+    </code></pre>
+    </section>
+
+    <section>
+      <h2>Shadowing</h2>
+      <p>
+        Shadowing occurs when a local variable has the same name as a global
+        one.
+      </p>
+      <pre><code>
+let message = "Global";
+
+function showMessage() {
+  let message = "Local";
+  console.log(message); // Outputs: Local
+}
+    </code></pre>
+    </section>
+    <hr />
+    <button type="button" onclick="location.href='mod5sect2.html';">
+      NEXT - SECTION 2
+    </button>
+
+    <footer>
+      <p>© 2025 TYLER VAN WYK. Rights reserved to Edube.org/(JSE).</p>
+    </footer>
+    <hr />
+  </body>
+</html>
